@@ -8,4 +8,4 @@ Ejercicios de la asignatura Programación **1º DAM (Desarrollo de Aplicaciones 
 * Lenguaje Java: variables, vucles, p00 etc.
 
 ## Bibliografía
-![Aprende java con Ejercicios](/Escritorios/ejercicio-programacion/Imagen)
+
