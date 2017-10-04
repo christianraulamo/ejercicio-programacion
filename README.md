@@ -7,7 +7,7 @@ Ejercicios de la asignatura Programación **1º DAM (Desarrollo de Aplicaciones 
 * Git y GitHub :octocat:
 * Lenguaje Java :coffee:: variables, vucles, p00 etc. 
 
-## "Hola Mundo" en java
+## :wave::earth_africa: "Hola Mundo" en java
 
 A continuación se muestra el programa "Hola Mundo" escrito en lenguaje java
 
