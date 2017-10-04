@@ -5,4 +5,7 @@ Ejercicios de la asignatura Programación **1º DAM (Desarrollo de Aplicaciones 
 
 * Comando de linux
 * Git y GitHub
-* Lenguaje Java: variables, vucles, p00...
+* Lenguaje Java: variables, vucles, p00 etc.
+
+## Bibliografía
+![Aprende java con Ejercicios](/Escritorios/ejercicio-programacion/Imagen)
