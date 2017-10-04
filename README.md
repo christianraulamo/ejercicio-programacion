@@ -11,7 +11,7 @@ Ejercicios de la asignatura Programación **1º DAM (Desarrollo de Aplicaciones 
 
 A continuación se muestra el programa "Hola Mundo" escrito en lenguaje java
 
-```
+```java
 /**
  * Muestra por pantalla la frase "¡Hola mundo!"
  *
