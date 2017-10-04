@@ -41,7 +41,7 @@ java HolaMundo
 
 [Aprende java con Ejercicios](https://leanpub.com/aprendejava)
 
-## Enlaces de interés
+## :globe_with_meridians: Enlaces de interés
 
 * [Página oficial del IES Campanillas](https://iescampanillas.com/)
 
