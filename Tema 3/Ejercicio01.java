@@ -1,5 +1,5 @@
 /**
- * Muestra por pantalla la frase "¡Hola mundo!"
+ * Ejercicio 01
  *
  * @author Christian Amo
  */
