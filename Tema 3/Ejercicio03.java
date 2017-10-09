@@ -8,7 +8,7 @@
    public static void main (String[] arg) {
    
     System.out.print("Por favor, introduzca la cantidad de pesetas que quiere convertir: ");
-    int pesetas = Integer.parseInt(System.console().readLine());
+    double pesetas = Integer.parseInt(System.console().readLine());
 
     double euros = pesetas / 166.386;
 
