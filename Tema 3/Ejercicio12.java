@@ -14,10 +14,10 @@ public class Ejercicio12 {
     double notaFinal = Double.parseDouble(System.console().readLine());
     
     // La nota final se calcula de esta forma:
-    // notaFinal = ((nota1 * 40) + (nota2 * 60)) / 100
+    // notaFinal = ((nota1 * 50) + (nota2 * 50)) / 100
     // Por tanto, despejando nota2 tenemos:
-    // nota2 = ((notaFinal * 100) - (nota1 * 40)) / 60
-    double nota2 = ((notaFinal * 100) - (nota1 * 40)) / 60;
+    // nota2 = ((notaFinal * 100) - (nota1 * 50)) / 50
+    double nota2 = ((notaFinal * 100) - (nota1 * 50)) / 50;
     
     System.out.println("Para tener un " + notaFinal + " en el trimestre necesitas sacar un " + nota2 + " en el segundo examen.");
   }
