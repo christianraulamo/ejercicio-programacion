@@ -5,8 +5,8 @@
  */
  
 public class Ejercicio09 {
-  
-  // Las constantes se deben declarar antes del main
+	
+	 // Las constantes se deben declarar antes del main
   static final double pi = 3.141592654;
   // En lugar de definir una constante se podría usar
   // la constante predefinida Math.PI 

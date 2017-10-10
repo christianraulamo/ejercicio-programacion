@@ -11,7 +11,7 @@ public class Ejercicio02 {
     System.out.print("Por favor, introduce la cantidad de euros que quieres convertir: ");
     double euros = Double.parseDouble(System.console().readLine());
 
-    double pesetas = (euros * 166.386);
+    int pesetas = (int)(euros * 166.386);
     
     System.out.print(euros + " euros son " + pesetas + " pesetas.");
   }
