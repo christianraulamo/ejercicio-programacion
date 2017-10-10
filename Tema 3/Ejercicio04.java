@@ -22,7 +22,7 @@
     System.out.println("y = " + y);
     System.out.println("x + y = " + (x + y));
     System.out.println("x - y = " + (x - y));
-    System.out.println("x / y = " + (x / y));
+    System.out.println("x / y = " + ((double)x / y));
     System.out.println("x * y = " + (x * y));
   }
 }
