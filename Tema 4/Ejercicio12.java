@@ -32,7 +32,8 @@ public class Ejercicio12 {
       puntos++;
     }
 
-    System.out.println("3. Para insertar un hiperenlace en una página se utiliza la etiqueta...");
+    System.out.print("3. Para insertar un hiperenlace en una página");
+    System.out.println(" se utiliza la etiqueta...");
     System.out.println("a) href\nb) a\nc) link"); 
     System.out.print("=> ");
     respuesta = System.console().readLine();  
@@ -40,7 +41,8 @@ public class Ejercicio12 {
       puntos++;
     }
     
-    System.out.println("4. ¿En qué directorio se encuentran los archivos de configuración de Linux?");
+    System.out.print("4. ¿En qué directorio se encuentran los");
+    System.out.println(" archivos de configuración de Linux?");
     System.out.println("a) /etc\nb) /config\nc) /cfg"); 
     System.out.print("=> ");
     respuesta = System.console().readLine();  
