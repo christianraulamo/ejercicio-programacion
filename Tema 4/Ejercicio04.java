@@ -4,7 +4,7 @@
  * @author Christian Amo
  */
 
-public class S04Ejercicio04 {
+public class Ejercicio04 {
   public static void main(String[] args) {
 
     int sueldoSemanal;
@@ -18,6 +18,6 @@ public class S04Ejercicio04 {
     else {
       sueldoSemanal = (40 * 12) + ((horasTrabajadas - 40) * 16);    
     }
-    System.out.println("El sueldo semanal que le corresponde es de " + sueldoSemanal + " euros");
+    System.out.println("El sueldo semanal que le corresponde es de " + sueldoSemanal + "€");
   }
 }
