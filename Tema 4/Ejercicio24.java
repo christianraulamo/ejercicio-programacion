@@ -57,7 +57,7 @@ public class Ejercicio24 {
     // Muestra la nómina desglosada
     System.out.println("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
     System.out.printf("┃ Sueldo base            %7.2f ┃\n", sueldoBase);
-    System.out.printf("┃ Dietas (%2d viajes)    %7.2f  ┃\n", diasVisita, sueldoDietas);
+    System.out.printf("┃ Dietas (%2d viajes)    %7.2f ┃\n", diasVisita, sueldoDietas);
     System.out.println("┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫");
     System.out.printf("┃ Sueldo bruto           %7.2f ┃\n", sueldoBruto);
     System.out.printf("┃ Retención IRPF (%.0f%%)   %7.2f ┃\n", irpf, cuantiaIrpf);
