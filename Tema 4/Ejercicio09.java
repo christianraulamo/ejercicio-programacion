@@ -11,7 +11,8 @@ public class Ejercicio09 {
 		
 		double x1, x2;
 
-		System.out.println("Este programa resuelve ecuaciones de segundo grado.");
+		System.out.print("Este programa resuelve ecuaciones de");
+		System.out.println(" segundo grado.");
 		System.out.println("ax^2 + bx + c = 0");
 		
 		System.out.println("Por favor, introduzca los valores.");

@@ -7,7 +7,8 @@
 public class Ejercicio05 {
   public static void main(String[] args) {
 
-    System.out.println("El programa resuelve ecuaciones de primer grado del tipo ax + b = 0");
+    System.out.print("El programa resuelve ecuaciones de primer ");
+    System.out.println ("grado del tipo ax + b = 0");
     System.out.print("Introduzca el valor de a: ");
     Double a = Double.parseDouble(System.console().readLine());
     System.out.print("Ahora introduzca el valor de b: ");

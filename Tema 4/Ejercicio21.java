@@ -16,7 +16,8 @@ public class Ejercicio21 {
     double media = (nota1 + nota2) / 2;
     
     if (media < 5) {
-      System.out.print("¿Cuál ha sido el resultado de la recuperación? (apto/no apto): ");
+      System.out.print("¿Cuál ha sido el resultado de la recuperación?");
+      System.out.print(" (apto/no apto): ");
       String recuperacion = System.console().readLine();
       if (recuperacion.equals("apto")) {
         media = 5;

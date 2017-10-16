@@ -9,7 +9,8 @@ public class Ejercicio01 {
 	  
 	  String dia;
 
-    System.out.print("Por favor, introduzca un día de la semana y le diré qué asignatura toca a primera hora ese día: ");
+    System.out.print("Por favor, introduzca un día de la semana y le ");
+    System.out.print("diré qué asignatura toca a primera hora ese día: ");
     dia = (System.console().readLine()); 
     dia.toLowerCase(); // convierto a minúsculas todas las letras
     
@@ -18,7 +19,8 @@ public class Ejercicio01 {
         System.out.println("Programación y Bases de Datos");
         break;
       case "martes":
-        System.out.println("Sistema Informatico, Lenguaje de Marcas y Programación");
+        System.out.print("Sistema Informatico, Lenguaje de Marcas y");
+        System.out.println(" Programación");
         break;
       case "miércoles":
         System.out.println("Programación y Base de Datos");

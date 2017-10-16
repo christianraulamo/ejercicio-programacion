@@ -10,7 +10,8 @@ public class Ejercicio13 {
     
     int aux;
         
-    System.out.println("Este programa ordena tres números introducidos por teclado.");
+    System.out.print("Este programa ordena tres números");
+    System.out.println(" introducidos por teclado.");
     System.out.println("<introduce los tres números y pulsando INTRO:");
     int a = Integer.parseInt(System.console().readLine());
     int b = Integer.parseInt(System.console().readLine());
@@ -37,6 +38,7 @@ public class Ejercicio13 {
       b = aux;
     }
         
-    System.out.println("Los números introducidos ordenados de menor a mayor son " + a + ", " + b + " y " + c + "."); 
+    System.out.print("Los números introducidos ordenados de menor");
+    System.out.println(" a mayor son " + a + ", " + b + " y " + c + "."); 
   }
 }

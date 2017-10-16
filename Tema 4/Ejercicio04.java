@@ -9,7 +9,8 @@ public class Ejercicio04 {
 
     int sueldoSemanal;
 
-    System.out.print("Introduzca el numero de horas que has trabajado en la semana: ");
+    System.out.print("Introduzca el numero de horas que has trabajado");
+    System.out.print(" en la semana: ");
     int horasTrabajadas = Integer.parseInt(System.console().readLine());
     
     if (horasTrabajadas < 40) {
@@ -18,6 +19,7 @@ public class Ejercicio04 {
     else {
       sueldoSemanal = (40 * 12) + ((horasTrabajadas - 40) * 16);    
     }
-    System.out.println("El sueldo semanal que le corresponde es de " + sueldoSemanal + "€");
+    System.out.print("El sueldo semanal que le corresponde es de " );
+    System.out.println( + sueldoSemanal + "€");
   }
 }

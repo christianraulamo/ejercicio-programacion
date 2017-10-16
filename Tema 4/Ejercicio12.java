@@ -14,7 +14,8 @@ public class Ejercicio12 {
     
     System.out.println("CUESTIONARIO DE 1º DAM");
     
-    System.out.println("1. ¿Cuál de los siguientes tipos de datos de Java tiene más precisión?");
+    System.out.print("1. ¿Cuál de los siguientes tipos de datos de");
+    System.out.println(" Java tiene más precisión?");
     System.out.println("a) int\nb) double\nc) float"); 
     System.out.print("=> ");
     respuesta = System.console().readLine();  
@@ -22,7 +23,8 @@ public class Ejercicio12 {
       puntos++;
     }
 
-    System.out.println("2. ¿Cuál es el lenguaje que se utiliza para hacer consultas en las bases de datos");
+    System.out.print("2. ¿Cuál es el lenguaje que se utiliza para");
+    System.out.println(" hacer consultas en las bases de datos");
     System.out.println("a) XML\nb) SELECT\nc) SQL"); 
     System.out.print("=> ");
     respuesta = System.console().readLine();  

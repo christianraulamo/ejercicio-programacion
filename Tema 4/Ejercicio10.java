@@ -10,8 +10,10 @@ public class Ejercicio10 {
     
     String horoscopo = "";
 
-    System.out.println("Este programa le dirá cuál es su horóscopo a partir de su fecha de nacimiento.");
-    System.out.print("Introduzca el número del mes en que nació el 1 para Enero y el 12 para Diciembre: ");
+    System.out.print("Este programa le dirá cuál es su horóscopo");
+    System.out.println(" a partir de su fecha de nacimiento.");
+    System.out.print("Introduzca el número del mes en que nació");
+    System.out.print(" el 1 para Enero y el 12 para Diciembre: ");
     int mes = Integer.parseInt(System.console().readLine());
     
     System.out.print("Ahora introduzca el día: ");
