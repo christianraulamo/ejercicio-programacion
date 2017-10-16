@@ -15,7 +15,7 @@ public class Ejercicio03 {
     
     String nombreDelDia;
 		
-		switch (dia) {
+	switch (dia) {
       case 1:
         nombreDelDia = "lunes";
         break;
