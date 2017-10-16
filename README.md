@@ -45,4 +45,4 @@ java HolaMundo
 
 * [Página oficial del IES Campanillas](https://iescampanillas.com/):bell:
 
-* [Guía de la asignatura de Programación](https://github.com/luisjosesanchez/programacion)
+* [Guía de la asignatura de Programación](https://github.com/luisjosesanchez/programacion):memo:
