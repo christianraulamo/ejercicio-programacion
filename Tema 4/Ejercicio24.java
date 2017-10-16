@@ -44,9 +44,11 @@ public class Ejercicio24 {
 
     if (estadoCivil == 1) { // Soltero
       irpf = 25;
-    } else if (estadoCivil == 2) { // Casado
+    } 
+    else if (estadoCivil == 2) { // Casado
       irpf = 20;
-    } else {
+    } 
+    else {
       System.out.println("No ha elegido correctamente el estado civil.");
     }
     

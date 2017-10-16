@@ -50,7 +50,8 @@ public class Ejercicio20 {
     
     if (capicua) {
       System.out.println("El número introducido es capicúa.");
-    } else {
+    } 
+    else {
       System.out.println("El número introducido no es capicúa.");
     }
   }

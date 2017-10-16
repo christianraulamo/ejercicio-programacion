@@ -15,7 +15,8 @@ public class Ejercicio05 {
 
     if (a == 0) {
       System.out.println("Esa ecuación no tiene solución real.");
-    } else {
+    } 
+    else {
       System.out.println("x = " + (-b/a));
     }
   }

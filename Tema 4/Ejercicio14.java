@@ -14,7 +14,8 @@ public class Ejercicio14 {
 
     if ((n % 2) == 0) {
       System.out.print("El número introducido es par");
-    } else {
+    } 
+    else {
       System.out.print("El número introducido es impar");
     }
 
