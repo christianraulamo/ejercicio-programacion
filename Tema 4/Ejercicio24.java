@@ -14,10 +14,12 @@ public class Ejercicio24 {
     System.out.print("Introduzca el cargo del empleado (1 - 3): ");
     int cargo = Integer.parseInt(System.console().readLine());
     
-    System.out.print("¿Cuántos días ha estado de viaje visitando clientes? ");
+    System.out.print("¿Cuántos días ha estado de viaje visitando");
+    System.out.print(" clientes? ");
     int diasVisita = Integer.parseInt(System.console().readLine());
 
-    System.out.print("Introduzca su estado civil (1 - Soltero, 2 - Casado): ");
+    System.out.print("Introduzca su estado civil (1 - Soltero,");
+    System.out.print(" 2 - Casado): ");
     int estadoCivil = Integer.parseInt(System.console().readLine());
 
     double sueldoBase = 0;
