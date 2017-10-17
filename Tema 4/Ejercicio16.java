@@ -17,8 +17,8 @@ public class Ejercicio16 {
     System.out.println(" de que tu pareja está siendo infiel.\n");
 
     System.out.print("1. Tu pareja parece estar más inquieta de lo");
-    System.out.print(" normal sin ningún motivo aparente.\n(v)erdadero");
-    System.out.print(" o (f)also: ");
+    System.out.print(" normal sin ningún motivo aparente.\n(v) se es");
+    System.out.print(" verdadero o (f) se es falso: ");
     respuesta = System.console().readLine();
     if ( respuesta.equals("v") ) {
       puntos += 3;
