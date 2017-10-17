@@ -11,7 +11,8 @@ public class Ejercicio20 {
     int n;
     boolean capicua = false;
     
-    System.out.print("Introduzca un número entero (de 5 cifras como máximo): ");
+    System.out.print("Introduzca un número entero (de 5 cifras");
+    System.out.print(" como máximo): ");
     n = Integer.parseInt(System.console().readLine());
     
     
