@@ -10,10 +10,12 @@ public class Ejercicio23 {
     System.out.print("Introduzca la base imponible: ");
     double baseImponible = Double.parseDouble(System.console().readLine());
     
-    System.out.print("Introduzca el tipo de IVA (general, reducido o superreducido): ");
+    System.out.print("Introduzca el tipo de IVA (general, reducido");
+    System.out.print(" o superreducido): ");
     String tipoIVA = System.console().readLine();
     
-    System.out.print("Introduzca el código promocional (nopro, mitad, meno5 o 5porc): ");
+    System.out.print("Introduzca el código promocional (nopro, mitad,");
+    System.out.print(" meno5 o 5porc): ");
     String codigoPromocional = System.console().readLine();
     
     // Calcula el IVA y el precio antes del descuento
@@ -54,7 +56,8 @@ public class Ejercicio23 {
         descuento = precioSinDescuento * 0.05;
         break;
       default:
-        System.out.println("El código promocional introducido no es correcto.");
+        System.out.print("El código promocional introducido no");
+        System.out.println(" es correcto.");
     }
     
     // Muestra el precio final del producto desglosado
