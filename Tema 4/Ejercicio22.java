@@ -7,7 +7,8 @@
 public class Ejercicio22 {
   public static void main(String[] args) {
 
-    System.out.print("Introduzca un día de la semana (de lunes a viernes): ");
+    System.out.print("Introduzca un día de la semana (de lunes");
+    System.out.print(" a viernes): ");
     String dia = System.console().readLine();
 
     int diaNumerico = 0;
