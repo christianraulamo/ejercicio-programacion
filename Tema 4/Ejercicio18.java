@@ -10,7 +10,8 @@ public class Ejercicio18 {
     
     int n, primera = 0;
     
-    System.out.print("Introduzca un número entero (de 5 cifras como máximo): ");
+    System.out.print("Introduzca un número entero (de 5 cifras como");
+    System.out.print(" máximo): ");
     n = Integer.parseInt(System.console().readLine());
     
     if ( n < 10 ) {
