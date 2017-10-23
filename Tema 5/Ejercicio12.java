@@ -26,11 +26,11 @@ public class Ejercicio12 {
         int f2 = 1;
         int aux;
         while(n > 2) {
-            aux = f1;
-            f1 = f2;
-            f2 = aux + f2;
-            System.out.print(" " + f2);
-            n--;
+          aux = f1;
+          f1 = f2;
+          f2 = aux + f2;
+          System.out.print(" " + f2);
+          n--;
         }
     }    
     System.out.println();
