@@ -10,10 +10,10 @@ public class Ejercicio12 {
   public static void main(String[] args) {
     
     System.out.println("El programa muestra los numeros primeros x de la serie de Fibonacci.");
-    System.out.print("Introduzca x: ");
-    int x = Integer.parseInt(System.console().readLine());
+    System.out.print("Introduzca n: ");
+    int n = Integer.parseInt(System.console().readLine());
 
-    switch (x) {
+    switch (n) {
       case 1:
         System.out.print("0");
         break;
@@ -25,12 +25,12 @@ public class Ejercicio12 {
         int f1 = 0;
         int f2 = 1;
         int aux;
-        while(x > 2) {
+        while(n > 2) {
             aux = f1;
             f1 = f2;
             f2 = aux + f2;
             System.out.print(" " + f2);
-            x--;
+            n--;
         }
     }    
     System.out.println();
