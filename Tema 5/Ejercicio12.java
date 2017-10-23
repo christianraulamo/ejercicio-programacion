@@ -29,7 +29,7 @@ public class Ejercicio12 {
           aux = f1;
           f1 = f2;
           f2 = aux + f2;
-          System.out.print(" " + f2);
+          System.out.print(" - " + f2);
           n--;
         }
     }    
