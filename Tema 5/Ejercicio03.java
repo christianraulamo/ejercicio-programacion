@@ -11,7 +11,7 @@ public class Ejercicio03 {
     int i = 0;
     
     do {
-      System.out.println(i);
+      System.out.print(i + " - ");
       i = i + 5;
     } while (i <= 100);
 		
