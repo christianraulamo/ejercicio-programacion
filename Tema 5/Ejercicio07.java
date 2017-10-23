@@ -14,13 +14,13 @@ public class Ejercicio07 {
     boolean acertado = false;
     
     do {
-      System.out.print("Meta el codigo de la caja de seguridad: ");
+      System.out.print("Meta la contrasena de la caja de seguridad: ");
       numeroIntroducido = Integer.parseInt(System.console().readLine());
       
       if (numeroIntroducido == 1604) {
         acertado = true;
       } else {
-        System.out.println("Clave incorrecta");
+        System.out.println("Contrasena incorrecta");
       }
       
       intentos--;
