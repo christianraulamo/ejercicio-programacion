@@ -12,7 +12,7 @@ public class Ejercicio04 {
 		
 		for (int i = 320; i >= 160; i = i - 20) {
 			
-			System.out.println(i);
+			System.out.print(i + " - ");
 		}
 	}
 }
