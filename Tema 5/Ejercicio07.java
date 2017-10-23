@@ -14,7 +14,8 @@ public class Ejercicio07 {
     boolean acertado = false;
     
     do {
-      System.out.print("Meta la contrasena de la caja de seguridad: ");
+      System.out.print("Meta la contrasena de la caja de seguridad");
+      System.out.print(" (Como masimo 4 digitos): ");
       numeroIntroducido = Integer.parseInt(System.console().readLine());
       
       if (numeroIntroducido == 1604) {
@@ -30,7 +31,7 @@ public class Ejercicio07 {
     if (acertado) {
       System.out.println("Ha abierto la caja fuerte.");
     } else {
-      System.out.println("Lo siento, ha agotado las 4 oportunidades.");
+      System.out.println("La caja a sido bloqueada.");
     }
   }
 }
