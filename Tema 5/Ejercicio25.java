@@ -4,8 +4,7 @@
  * @author Christian Amo
  */
  
-  public class Ejercicio25 {
-  
+public class Ejercicio25 {
   public static void main(String[] args) {
 
     System.out.print("Meta un número entero: ");
