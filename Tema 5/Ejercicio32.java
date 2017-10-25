@@ -8,7 +8,7 @@ public class Ejercicio32 {
   
   public static void main (String args[]) {
     
-     System.out.print("Meta un número entero positivo: ");
+    System.out.print("Meta un número entero positivo: ");
     long numeroIntroducido = Long.parseLong(System.console().readLine());
 
     long numero = numeroIntroducido;
