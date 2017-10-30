@@ -8,7 +8,7 @@ public class Ejercicio33 {
   
   public static void main (String args[]) {
     
-    System.out.print("Meta La altura de la U: ");
+    System.out.print("Meta La altura de la U que sea mayor de 1: ");
     int altura = Integer.parseInt(System.console().readLine());
 
     for (int i = 1; i < altura; i++) {
