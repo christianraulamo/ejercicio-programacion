@@ -61,6 +61,6 @@ public class Ejercicio40 {
         espaciosExteriores++;
         espaciosInternos -= 2;
       }     
-    } 
-  }
+  } 
+}
 
