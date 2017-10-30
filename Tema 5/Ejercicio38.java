@@ -1,62 +1,52 @@
 /**
- * Ejercicio 35
+ * Ejercicio 38
  *
  * @author Christian Amo
  */
  
-public class Ejercicio35 {
+public class Ejercicio38 {
   
   public static void main (String args[]) {
-    
-    System.out.println("La altura tiene que ser igual o mayor de 3 e impar");
-    System.out.print("Meta la altura de la X: ");
+    System.out.print("Meta la altura del reloj de arena: ");
     int alturaIntroducida = Integer.parseInt(System.console().readLine());
 
     int altura = 1;
-    int i = 0;
-    int espaciosInternos = alturaIntroducida - 1;
+    int asteriscos = alturaIntroducida;
     int espaciosExteriores = 0;
 
       while (altura < alturaIntroducida / 2 + 1) {
         
-        for (i = 1; i <= espaciosExteriores; i++) {
+        for (int i = 1; i <= espaciosExteriores; i++) {
           System.out.print(" ");
         }
         
-        System.out.print("*");
-        for (i = 1; i < espaciosInternos; i++) {
-          System.out.print(" ");
+        for (int i = 0; i < asteriscos; i++) {
+          System.out.print("*");
         }
-        System.out.print("*");
         
         System.out.println();
         altura++;
         espaciosExteriores++;
-        espaciosInternos -= 2;      
-      } 
+        asteriscos -= 2;
+      }
       
-      espaciosInternos = 0;
       espaciosExteriores = alturaIntroducida / 2;
       altura = 1;
       while (altura <= alturaIntroducida / 2 + 1) {
         
-        for (i = 1; i <= espaciosExteriores; i++) {
+        for (int i = 1; i <= espaciosExteriores; i++) {
           System.out.print(" ");
         }
         
-        System.out.print("*");
-        for (i = 1; i < espaciosInternos; i++) {
-          System.out.print(" ");
-        }
-        
-        if(altura>1) {
+        for (int i = 0; i < asteriscos; i++) {
           System.out.print("*");
         }
         
         System.out.println();
         altura++;
         espaciosExteriores--;
-        espaciosInternos+=2;
+        asteriscos += 2;
+      } 
     } 
   }
 }
