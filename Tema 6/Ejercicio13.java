@@ -16,9 +16,6 @@ public class Ejercicio13 {
             dadoDos = (int)(Math.random()*6) + 1;
             System.out.print(dadoUno);
             System.out.println(dadoDos);
-            
-            
         }while (dadoUno != dadoDos);
-        
     }
 }
