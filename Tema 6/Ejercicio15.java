@@ -8,35 +8,52 @@ public class Ejercicio15 {
     
     public static void main (String[] args) {
         
-        for (int i = 1; i <= 4; i++) {
-        int melodia = (int)(Math.random()*7) + 1;
-      
-      switch (melodia) {
-        
+int notas = 4 * (int)(Math.random() * 7 + 1);
+    String nota = "";
+    String primeraNota = "";
+
+    for (int contadorNota = 1; contadorNota <= notas; contadorNota++) {
+      switch((int)(Math.random() * 7)) {
+        case 0:
+          nota = "do";
+          break;
         case 1:
-         System.out.print(" do");
-         break;
+          nota = "re";
+          break;
         case 2:
-         System.out.print(" re");
-         break;
+          nota = "mi";
+          break;
         case 3:
-         System.out.print(" mi");
-         break;
+          nota = "fa";
+          break;
         case 4:
-         System.out.print(" fa");
-         break;
-         case 5:
-         System.out.print(" so");
-         break;
-         case 6:
-         System.out.print(" la");
-         break;
-         case 7:
-         System.out.print(" si");
-         break;
-       }
-   }
-   System.out.print("|");
-        
-    }
+          nota = "sol";
+          break;
+        case 5:
+          nota = "la";
+          break;
+        case 6:
+          nota = "si";
+          break;
+        default:
+      }
+
+      if (contadorNota == 1) {
+        primeraNota = nota;
+      }
+
+      if (contadorNota == notas) {
+        nota = primeraNota;
+      }
+
+      System.out.print(nota + " ");
+
+      if ( contadorNota == notas ) {
+        System.out.print("||");
+      } else if ( contadorNota % 4 == 0 ) {
+        System.out.print("| ");
+      }
+      
+    } 
+  }
 }
