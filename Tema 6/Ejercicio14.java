@@ -31,12 +31,16 @@ public class Ejercicio14 {
             int numeroReducido = Integer.parseInt(System.console().readLine());
             
             if (numeroReducido == 1) {
-                limiteInferior = numero;
+                limiteInferior = numero + 1;
             }
             if (numeroReducido == 2) {
-                limiteSuperior = numero;
+                limiteSuperior = numero - 1;
             }
-            break; 
+             
+            
+            System.out.println("El limite inferior es : " + limiteInferior);
+            System.out.println("El limite superior es : " + limiteSuperior);
+            break;
         }
         
         intentos --;
