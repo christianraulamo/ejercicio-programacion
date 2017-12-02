@@ -1,4 +1,3 @@
-package ejercicio13;
 
 /**
  * Ejercicio
