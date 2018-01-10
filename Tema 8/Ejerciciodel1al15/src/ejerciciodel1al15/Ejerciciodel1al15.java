@@ -64,6 +64,22 @@ public class Ejerciciodel1al15 {
         System.out.println("El -789543678 volteado es " + ejerciciodel1al15.matematicas.varia.voltea(-789543678));
         System.out.println("El 398 volteado es " + ejerciciodel1al15.matematicas.varia.voltea(398));
 
+        // digitoN //////////////////////////////////////////////////////
+        System.out.println("En la posición 1 del 27819 está el " + ejerciciodel1al15.matematicas.varia.digitoN(27819, 1));
+        System.out.println("En la posición 3 del 92341 está el " + ejerciciodel1al15.matematicas.varia.digitoN(92341, 3));
+        System.out.println("En la posición 4 del 212385136 está el " + ejerciciodel1al15.matematicas.varia.digitoN(212385136, 4));
+        System.out.println("En la posición 6 del 230108375 está el " + ejerciciodel1al15.matematicas.varia.digitoN(230108375, 6));
+
+        //  posicionDeDigito //////////////////////////////////////////////
+        System.out.println("En el 754829, el dígito 8 está en la posición " + ejerciciodel1al15.matematicas.varia.posicionDeDigito(754829, 8));
+        System.out.println("En el 456789543, el dígito 9 está en la posición " + ejerciciodel1al15.matematicas.varia.posicionDeDigito(456789543, 9));
+        System.out.println("En el 823664012, el dígito 0 está en la posición " + ejerciciodel1al15.matematicas.varia.posicionDeDigito(823664012, 0));
+        System.out.println("En el 6012837, el dígito 2 está en la posición " + ejerciciodel1al15.matematicas.varia.posicionDeDigito(6012837, 2));
+
+        // quitaPorDetras /////////////////////////////////////////////////
+        System.out.println("Si al 638539123 se le quitan por detrás 4 dígitos, se queda como " + ejerciciodel1al15.matematicas.varia.quitaPorDetras(638539123, 4));
+        System.out.println("Si al 999999 se le quita por detrás 2 dígito, se queda como " + ejerciciodel1al15.matematicas.varia.quitaPorDetras(999999, 2));
+
     }
 
 }
