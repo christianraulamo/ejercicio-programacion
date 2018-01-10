@@ -57,8 +57,12 @@ public class Ejerciciodel1al15 {
         System.out.println("El número 456787654 tiene " + ejerciciodel1al15.matematicas.varia.digitos(456787654) + " dígito/s.");
         System.out.println("El número 1 tiene " + ejerciciodel1al15.matematicas.varia.digitos(1) + " dígito/s.");
         System.out.println("El número 7248842 tiene " + ejerciciodel1al15.matematicas.varia.digitos(7248842) + " dígito/s.");
-        
+
         // voltea /////////////////////////////////////////////////
+        System.out.println("El 76 volteado es " + ejerciciodel1al15.matematicas.varia.voltea(76));
+        System.out.println("El 567843 volteado es " + ejerciciodel1al15.matematicas.varia.voltea(567843));
+        System.out.println("El -789543678 volteado es " + ejerciciodel1al15.matematicas.varia.voltea(-789543678));
+        System.out.println("El 398 volteado es " + ejerciciodel1al15.matematicas.varia.voltea(398));
 
     }
 
