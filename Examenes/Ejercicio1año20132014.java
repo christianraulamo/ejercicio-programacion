@@ -10,38 +10,10 @@ public class Ejercicio1año20132014 {
   
   public static void main (String args[]) {
     
-    System.out.print("Meta la altura: ");    
-    int alturaIntroducida = Integer.parseInt(System.console().readLine());
+    System.out.print("Meta el tamaño del roscón (1 para el pequeño, 2 para el mediano y 3 para el grande.): ");    
+    int tamaño = Integer.parseInt(System.console().readLine());
     
-    int altura = 0;
-    int i = 0;
-    int espaciosInternos = alturaIntroducida - 1;
-    int espaciosExteriores = 0;
-
     
-    while (altura < alturaIntroducida / 2 + 1) {
-      System.out.print("* ");
-      
-        altura++;
-      }
-       
-      System.out.println();
-      
-      espaciosInternos = 0;
-      espaciosExteriores = alturaIntroducida / 2;
-      altura = 1;
-      
-      while (altura <= alturaIntroducida - 1) {
-        
-        for (i = 1; i <= espaciosExteriores; i++) {
-          System.out.print(" ");
-        }
-        
-        System.out.println("*");
-        
-        altura++;
-
-    } 
 
   }
 }
