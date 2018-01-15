@@ -106,6 +106,12 @@ public class Ejerciciodel1al15 {
         System.out.println("Al 417654392 le cojo el trozo que va de la posición 0 a la 2: " + ejerciciodel1al15.matematicas.varia.trozoDeNumero(417654392, 0, 2));
         System.out.println("Al 417654392 le cojo el trozo que va de la posición 6 a la 7: " + ejerciciodel1al15.matematicas.varia.trozoDeNumero(417654392, 6, 7));
 
+        // juntaNumeros //////////////////////////////////////////////////////
+        System.out.println("Juntando el 19 y el 31 da el " + ejerciciodel1al15.matematicas.varia.juntaNumeros(19, 31));
+        System.out.println("Juntando el 1 y el 900 da el " + ejerciciodel1al15.matematicas.varia.juntaNumeros(1, 900));
+        System.out.println("Juntando el 123 y el 980 da el " + ejerciciodel1al15.matematicas.varia.juntaNumeros(123, 980));
+        System.out.println("Juntando el 3142 y el 0 da el " + ejerciciodel1al15.matematicas.varia.juntaNumeros(3142, 0));
+
     }
 
 }
