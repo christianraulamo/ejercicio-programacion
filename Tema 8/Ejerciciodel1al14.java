@@ -1,4 +1,4 @@
-package ejerciciodel1al15;
+package ejerciciodel1al14;
 
 /**
  * Ejercicio
@@ -7,7 +7,7 @@ package ejerciciodel1al15;
  */
 import ejerciciodel1al15.matematicas.varia;
 
-public class Ejerciciodel1al15 {
+public class Ejerciciodel1al14 {
 
     public static void main(String[] args) {
 
