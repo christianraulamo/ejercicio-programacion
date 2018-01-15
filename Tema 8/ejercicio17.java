@@ -4,14 +4,18 @@ package ejerciciodel1al15;
  *
  * @author christian
  */
+import ejerciciodel1al15.matematicas.varia;
+import java.util.Scanner;
+
 public class ejercicio17 {
 
     public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
 
         long decimal = 0;
 
         System.out.print("Introduzca un número binario: ");
-        long binario = Long.parseLong(System.console().readLine());
+        int binario = s.nextInt();
 
         int bits = ejerciciodel1al15.matematicas.varia.digitos(binario);
 
