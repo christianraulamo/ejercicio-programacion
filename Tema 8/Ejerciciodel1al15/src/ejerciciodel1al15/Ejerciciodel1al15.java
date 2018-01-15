@@ -95,7 +95,10 @@ public class Ejerciciodel1al15 {
         System.out.println("Si al 8901 se le pega por detrás el 1 da el " + ejerciciodel1al15.matematicas.varia.pegaPorDetras(8901, 1));
         
         // pegarPorDetras //////////////////////////////////////////////////
-        
+        System.out.println("Si al 5547 se le pega por detrás el 9 da el " + ejerciciodel1al15.matematicas.varia.pegaPorDelante(5547, 9));
+        System.out.println("Si al 13 se le pega por detrás el 12 da el " + ejerciciodel1al15.matematicas.varia.pegaPorDelante(13, 12));
+        System.out.println("Si al 7 se le pega por detrás el 152 da el " + ejerciciodel1al15.matematicas.varia.pegaPorDelante(7, 152));
+        System.out.println("Si al 8901 se le pega por detrás el 1 da el " + ejerciciodel1al15.matematicas.varia.pegaPorDelante(8901, 1));
 
     }
 
