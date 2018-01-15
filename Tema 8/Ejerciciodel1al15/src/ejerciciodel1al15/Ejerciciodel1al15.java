@@ -79,6 +79,23 @@ public class Ejerciciodel1al15 {
         // quitaPorDetras /////////////////////////////////////////////////
         System.out.println("Si al 638539123 se le quitan por detrás 4 dígitos, se queda como " + ejerciciodel1al15.matematicas.varia.quitaPorDetras(638539123, 4));
         System.out.println("Si al 999999 se le quita por detrás 2 dígito, se queda como " + ejerciciodel1al15.matematicas.varia.quitaPorDetras(999999, 2));
+        System.out.println("Si al 524682 se le quita por detrás 1 dígito, se queda como " + ejerciciodel1al15.matematicas.varia.quitaPorDetras(524682, 1));
+        System.out.println("Si al 7281398 se le quita por detrás 5 dígito, se queda como " + ejerciciodel1al15.matematicas.varia.quitaPorDetras(7281398, 5));
+
+        // quitaPorDelante /////////////////////////////////////////////////
+        System.out.println("Si al 638539123 se le quitan por detrás 4 dígitos, se queda como " + ejerciciodel1al15.matematicas.varia.quitaPorDelante(638539123, 4));
+        System.out.println("Si al 999999 se le quita por detrás 2 dígito, se queda como " + ejerciciodel1al15.matematicas.varia.quitaPorDelante(999999, 2));
+        System.out.println("Si al 524682 se le quita por detrás 1 dígito, se queda como " + ejerciciodel1al15.matematicas.varia.quitaPorDelante(524682, 1));
+        System.out.println("Si al 7281398 se le quita por detrás 5 dígito, se queda como " + ejerciciodel1al15.matematicas.varia.quitaPorDelante(7281398, 5));
+
+        // pegaPorDetras ///////////////////////////////////////////////////
+        System.out.println("Si al 5547 se le pega por detrás el 9 da el " + ejerciciodel1al15.matematicas.varia.pegaPorDetras(5547, 9));
+        System.out.println("Si al 13 se le pega por detrás el 12 da el " + ejerciciodel1al15.matematicas.varia.pegaPorDetras(13, 12));
+        System.out.println("Si al 7 se le pega por detrás el 152 da el " + ejerciciodel1al15.matematicas.varia.pegaPorDetras(7, 152));
+        System.out.println("Si al 8901 se le pega por detrás el 1 da el " + ejerciciodel1al15.matematicas.varia.pegaPorDetras(8901, 1));
+        
+        // pegarPorDetras //////////////////////////////////////////////////
+        
 
     }
 
