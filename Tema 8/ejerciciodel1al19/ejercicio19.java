@@ -1,10 +1,10 @@
-package ejerciciodel1al15;
+package ejerciciodel1al19;
 
 /**
  *
  * @author christian
  */
-import ejerciciodel1al15.matematicas.Varia;
+import ejerciciodel1al19.matematicas.Varia;
 public class ejercicio19 {
 
     public static void main(String[] args) {
@@ -90,10 +90,10 @@ public class ejercicio19 {
             binario = binario / 1000;
         };
 
-        octal = ejerciciodel1al15.matematicas.Varia.pegaPorDetras(octal, 1);
-        octal = ejerciciodel1al15.matematicas.Varia.voltea(octal);
-        octal = ejerciciodel1al15.matematicas.Varia.quitaPorDetras(octal, 1);
-        octal = ejerciciodel1al15.matematicas.Varia.quitaPorDelante(octal, 1);
+        octal = ejerciciodel1al19.matematicas.Varia.pegaPorDetras(octal, 1);
+        octal = ejerciciodel1al19.matematicas.Varia.voltea(octal);
+        octal = ejerciciodel1al19.matematicas.Varia.quitaPorDetras(octal, 1);
+        octal = ejerciciodel1al19.matematicas.Varia.quitaPorDelante(octal, 1);
 
         return octal;
     }
@@ -107,10 +107,10 @@ public class ejercicio19 {
     public static long binarioADecimal(long binario) {
         long decimal = 0;
 
-        int bits = ejerciciodel1al15.matematicas.Varia.digitos(binario);
+        int bits = ejerciciodel1al19.matematicas.Varia.digitos(binario);
 
         for (int i = 0; i < bits; i++) {
-            decimal += ejerciciodel1al15.matematicas.Varia.digitoN(binario, bits - i - 1) * ejerciciodel1al15.matematicas.Varia.potencia(2, i);
+            decimal += ejerciciodel1al19.matematicas.Varia.digitoN(binario, bits - i - 1) * ejerciciodel1al19.matematicas.Varia.potencia(2, i);
         }
 
         return decimal;
@@ -143,8 +143,8 @@ public class ejercicio19 {
     public static long octalABinario(long octal) {
         long binario = 0;
 
-        for (int i = 0; i < ejerciciodel1al15.matematicas.Varia.digitos(octal); i++) {
-            binario = binario * 1000 + decimalABinario(ejerciciodel1al15.matematicas.Varia.digitoN(octal, i));
+        for (int i = 0; i < ejerciciodel1al19.matematicas.Varia.digitos(octal); i++) {
+            binario = binario * 1000 + decimalABinario(ejerciciodel1al19.matematicas.Varia.digitoN(octal, i));
         }
 
         return binario;
@@ -164,12 +164,12 @@ public class ejercicio19 {
         long binario = 1;
 
         while (decimal > 1) {
-            binario = ejerciciodel1al15.matematicas.Varia.pegaPorDetras(binario, (int) decimal % 2);
+            binario = ejerciciodel1al19.matematicas.Varia.pegaPorDetras(binario, (int) decimal % 2);
             decimal = decimal / 2;
         }
-        binario = ejerciciodel1al15.matematicas.Varia.pegaPorDetras(binario, 1);
-        binario = ejerciciodel1al15.matematicas.Varia.voltea(binario);
-        binario = ejerciciodel1al15.matematicas.Varia.quitaPorDetras(binario, 1);
+        binario = ejerciciodel1al19.matematicas.Varia.pegaPorDetras(binario, 1);
+        binario = ejerciciodel1al19.matematicas.Varia.voltea(binario);
+        binario = ejerciciodel1al19.matematicas.Varia.quitaPorDetras(binario, 1);
 
         return binario;
     }

@@ -1,10 +1,10 @@
-package ejerciciodel1al15;
+package ejerciciodel1al19;
 
 /**
  *
  * @author christian
  */
-import ejerciciodel1al15.matematicas.Varia;
+import ejerciciodel1al19.matematicas.Varia;
 import java.util.Scanner;
 
 public class ejercicio18 {
@@ -34,12 +34,12 @@ public class ejercicio18 {
         long binario = 1;
 
         while (decimal > 1) {
-            binario = ejerciciodel1al15.matematicas.Varia.pegaPorDetras(binario, decimal % 2);
+            binario = ejerciciodel1al19.matematicas.Varia.pegaPorDetras(binario, decimal % 2);
             decimal = decimal / 2;
         }
-        binario = ejerciciodel1al15.matematicas.Varia.pegaPorDetras(binario, 1);
-        binario = ejerciciodel1al15.matematicas.Varia.voltea(binario);
-        binario = ejerciciodel1al15.matematicas.Varia.quitaPorDetras(binario, 1);
+        binario = ejerciciodel1al19.matematicas.Varia.pegaPorDetras(binario, 1);
+        binario = ejerciciodel1al19.matematicas.Varia.voltea(binario);
+        binario = ejerciciodel1al19.matematicas.Varia.quitaPorDetras(binario, 1);
 
         return binario;
 
