@@ -9,14 +9,17 @@ package ejerciciodel1al15;
  *
  * @author christian
  */
+import ejerciciodel1al15.matematicas.Varia;
+
 public class ejercicio16 {
+
     public static void main(String[] args) {
 
         for (int i = 1; i < 99999; i++) {
-            if (ejerciciodel1al15.matematicas.varia.esCapicua(i)) {
+            if (ejerciciodel1al15.matematicas.Varia.esCapicua(i)) {
                 System.out.print(i + "  ");
             }
         }
     }
-    
+
 }

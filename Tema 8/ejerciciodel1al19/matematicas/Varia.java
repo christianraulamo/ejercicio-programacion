@@ -4,7 +4,7 @@ package ejerciciodel1al15.matematicas;
  *
  * @author christian
  */
-public class varia {
+public class Varia {
 
     /**
      * Devuelve verdadero si el número que se pasa como parámetro 
