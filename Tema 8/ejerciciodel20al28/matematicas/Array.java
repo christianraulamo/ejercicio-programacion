@@ -1,4 +1,4 @@
-package array.matematicas;
+package ejerciciodel20al28.matematicas;
 
 /**
  *

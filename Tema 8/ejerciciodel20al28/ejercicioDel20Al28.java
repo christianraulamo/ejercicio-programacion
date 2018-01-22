@@ -1,10 +1,10 @@
-package array;
+package ejerciciodel20al28;
 
 /**
  *
  * @author christian
  */
-import array.matematicas.Array;
+import ejerciciodel20al28.matematicas.Array;
 public class ejercicioDel20Al28 {
   public static void main(String[] args) {
     
