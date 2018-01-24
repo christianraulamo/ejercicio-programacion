@@ -188,4 +188,8 @@ public class Varias {
     public static void mostrarArrayInt(int[][] array) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    public static void columnaDeArrayBiInt(int[] filtraPrimos) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
