@@ -5,190 +5,109 @@ package ejerciciodel1al19;
  * @author christian
  */
 import ejerciciodel1al19.matematicas.Varia;
+import java.util.Scanner;
 public class ejercicio19 {
 
-    public static void main(String[] args) {
-
-        String resultado = "";
-        long numeroIntroducido = 666;
-
-        System.out.println(" 1) Binario -> Octal");
-        System.out.println(" 2) Binario -> Decimal");
-        System.out.println(" 3) Binario -> Hexadecimal");
-        System.out.println(" 4) Octal -> Binario");
-        System.out.println(" 5) Octal -> Decimal");
-        System.out.println(" 6) Octal -> Hexadecimal");
-        System.out.println(" 7) Decimal -> Binario");
-        System.out.println(" 8) Decimal -> Octal");
-        System.out.println(" 9) Decimal -> Hexadecimal");
-        System.out.println("10) Hexadecimal -> Binario");
-        System.out.println("11) Hexadecimal -> Octal");
-        System.out.println("12) Hexadecimal -> Decimal");
-        System.out.print("Elija una opción: ");
-        int opcion = Integer.parseInt(System.console().readLine());
-
-        System.out.print("Introduzca el número que quiere convertir: ");
-        String numeroIntroducidoString = System.console().readLine();
-
-        if (opcion < 10) {
-            numeroIntroducido = Long.parseLong(numeroIntroducidoString);
-        }
-
-        switch (opcion) {
-            case 1:
-                resultado = Long.toString(binarioAOctal(numeroIntroducido));
-                break;
-            case 2:
-                resultado = Long.toString(binarioADecimal(numeroIntroducido));
-                break;
-            case 3:
-                resultado = binarioAHexadecimal(numeroIntroducido);
-                break;
-            case 4:
-                resultado = Long.toString(octalABinario(numeroIntroducido));
-                break;
-            case 5:
-                resultado = Long.toString(binarioADecimal(octalABinario(numeroIntroducido)));
-                break;
-            case 6:
-                resultado = binarioAHexadecimal(octalABinario(numeroIntroducido));
-                break;
-            case 7:
-                resultado = Long.toString(decimalABinario(numeroIntroducido));
-                break;
-            case 8:
-                resultado = Long.toString(binarioAOctal(decimalABinario(numeroIntroducido)));
-                break;
-            case 9:
-                resultado = binarioAHexadecimal(decimalABinario(numeroIntroducido));
-                break;
-            case 10:
-                resultado = Long.toString(hexadecimalABinario(numeroIntroducidoString));
-                break;
-            case 11:
-                resultado = Long.toString(binarioAOctal(hexadecimalABinario(numeroIntroducidoString)));
-                break;
-            case 12:
-                resultado = Long.toString(binarioADecimal(hexadecimalABinario(numeroIntroducidoString)));
-                break;
-        }
-
-        System.out.println(resultado);
-    } // main
-
-    /**
-     * Pasa un número binario (en base 2) a octal (base 8).
-     *
-     * @param binario número entero en binario
-     * @return número inicial pasado a octal
-     */
-    public static long binarioAOctal(long binario) {
-        long octal = 1;
-
-        while (binario > 0) {
-            octal = octal * 10 + (binarioADecimal(binario % 1000));
-            binario = binario / 1000;
-        };
-
-        octal = ejerciciodel1al19.matematicas.Varia.pegaPorDetras(octal, 1);
-        octal = ejerciciodel1al19.matematicas.Varia.voltea(octal);
-        octal = ejerciciodel1al19.matematicas.Varia.quitaPorDetras(octal, 1);
-        octal = ejerciciodel1al19.matematicas.Varia.quitaPorDelante(octal, 1);
-
-        return octal;
+     public static void main(String[] args) {
+    Scanner s = new Scanner(System.in);
+    System.out.println("Introduce la base de origen: ");
+    System.out.println("1.- Decimal.");
+    System.out.println("2.- Binario.");
+    System.out.println("3.- Hexadecimal.");
+    System.out.println("4.- Octal.");
+    int tipoOrigen = s.nextInt();
+    System.out.print("Introduce el número que quiere cambiar de base: ");
+    int numero = s.nextInt();
+    System.out.println("Ahora escriba el a que tipo quiere cambiar: ");
+    System.out.println("1.- Decimal.");
+    System.out.println("2.- Binario.");
+    System.out.println("3.- Hexadecimal.");
+    System.out.println("4.- Octal.");
+    int tipoFinal = s.nextInt();
+    if (tipoOrigen == 1) {
+      switch (tipoFinal) {
+        case 1:
+          System.out.println("Su número ya está en decimal.");
+          break;
+        case 2:
+          System.out.println("Su número en binario es: " + ejerciciodel1al19.matematicas.Varia.binario(numero));
+          break;
+        case 3:
+          System.out.println("Su número en hexadecimal es: " + ejerciciodel1al19.matematicas.Varia.hexadecimal(numero));
+          break;
+        case 4:
+          System.out.println("Su número en octal es: " + ejerciciodel1al19.matematicas.Varia.octal(numero));
+          break;
+        default:
+          System.out.println("Dato incorrecto.");
+          break;
+      }
     }
-
-    /**
-     * Pasa un número binario (en base 2) a decimal (base 10).
-     *
-     * @param binario número entero en binario
-     * @return número inicial pasado a decimal
-     */
-    public static long binarioADecimal(long binario) {
-        long decimal = 0;
-
-        int bits = ejerciciodel1al19.matematicas.Varia.digitos(binario);
-
-        for (int i = 0; i < bits; i++) {
-            decimal += ejerciciodel1al19.matematicas.Varia.digitoN(binario, bits - i - 1) * ejerciciodel1al19.matematicas.Varia.potencia(2, i);
-        }
-
-        return decimal;
+    if (tipoOrigen == 2) {
+      switch (tipoFinal) {
+        case 1:
+          System.out.println("Su número en decimal es: " + ejerciciodel1al19.matematicas.Varia.decimal(numero));
+          break;
+        case 2:
+          System.out.println("Su número ya está en binario.");
+          break;
+        case 3:
+          numero = ejerciciodel1al19.matematicas.Varia.decimal(numero);
+          System.out.println("Su número en hexadecimal es: " + ejerciciodel1al19.matematicas.Varia.hexadecimal(numero));
+          break;
+        case 4:
+          numero = ejerciciodel1al19.matematicas.Varia.decimal(numero);
+          numero = ejerciciodel1al19.matematicas.Varia.octal(numero);
+          System.out.println("Su número en octal es: " + numero);
+          break;
+        default:
+          System.out.println("Dato incorrecto.");
+          break;
+      }
     }
-
-    /**
-     * Pasa un número binario (en base 2) a hexadecimal (base 16).
-     *
-     * @param binario número entero en binario
-     * @return número inicial pasado a hexadecimal
-     */
-    public static String binarioAHexadecimal(long binario) {
-        String hexadecimal = "";
-        String digitosHexa = "0123456789ABCDEF";
-
-        while (binario > 0) {
-            hexadecimal = digitosHexa.charAt((int) binarioADecimal(binario % 10000)) + hexadecimal;
-            binario = binario / 10000;
-        };
-
-        return hexadecimal;
+    if (tipoOrigen == 3) {
+      switch (tipoFinal) {
+        case 1:
+          System.out.println("Su número en decimal es: " + ejerciciodel1al19.matematicas.Varia.hexaDec(numero));
+          break;
+        case 2:
+          numero = ejerciciodel1al19.matematicas.Varia.hexaDec(numero);
+          System.out.println("Su número en binario es: " + ejerciciodel1al19.matematicas.Varia.binario(numero));
+          break;
+        case 3:
+          System.out.print("Su número ya está en hexadecimal.");
+          break;
+        case 4:
+          numero = ejerciciodel1al19.matematicas.Varia.hexaDec(numero);
+          System.out.println("Su número en octal es: " + ejerciciodel1al19.matematicas.Varia.octal(numero));
+          break;
+        default:
+          System.out.println("Dato incorrecto.");
+          break;
+      }
     }
-
-    /**
-     * Pasa un número octal (en base 8) a binario (base 2).
-     *
-     * @param octal número entero en octal
-     * @return número inicial pasado a binario
-     */
-    public static long octalABinario(long octal) {
-        long binario = 0;
-
-        for (int i = 0; i < ejerciciodel1al19.matematicas.Varia.digitos(octal); i++) {
-            binario = binario * 1000 + decimalABinario(ejerciciodel1al19.matematicas.Varia.digitoN(octal, i));
-        }
-
-        return binario;
+    if (tipoOrigen == 4) {
+      switch (tipoFinal) {
+        case 1:
+          numero = ejerciciodel1al19.matematicas.Varia.octalDec(numero);
+          System.out.println("Su número en decimal es: " + numero);
+          break;
+        case 2:
+          numero = ejerciciodel1al19.matematicas.Varia.octalDec(numero);
+          numero = ejerciciodel1al19.matematicas.Varia.binario(numero);
+          System.out.println("Su número en binario es: " + numero);
+          break;
+        case 3:
+          numero = ejerciciodel1al19.matematicas.Varia.octalDec(numero);
+          System.out.println("Su número en hexadecimal es: " + ejerciciodel1al19.matematicas.Varia.hexadecimal(numero));
+          break;
+        case 4:
+          System.out.print("Su número ya está en octal.");
+          break;
+        default:
+          System.out.println("Dato incorrecto.");
+          break;
+      }
     }
-
-    /**
-     * Pasa un número decimal (en base 10) a binario (base 2).
-     *
-     * @param octal número entero en decimal
-     * @return número inicial pasado a binario
-     */
-    public static long decimalABinario(long decimal) {
-        if (decimal == 0) {
-            return 0;
-        }
-
-        long binario = 1;
-
-        while (decimal > 1) {
-            binario = ejerciciodel1al19.matematicas.Varia.pegaPorDetras(binario, (int) decimal % 2);
-            decimal = decimal / 2;
-        }
-        binario = ejerciciodel1al19.matematicas.Varia.pegaPorDetras(binario, 1);
-        binario = ejerciciodel1al19.matematicas.Varia.voltea(binario);
-        binario = ejerciciodel1al19.matematicas.Varia.quitaPorDetras(binario, 1);
-
-        return binario;
-    }
-
-    /**
-     * Pasa un número hexadecimal (en base 10) a binario (base 2).
-     *
-     * @param hexadecimal número entero en hexadecimal
-     * @return número inicial pasado a binario
-     */
-    public static long hexadecimalABinario(String hexadecimal) {
-        String digitosHexa = "0123456789ABCDEF";
-        long binario = 0;
-
-        for (int i = 0; i < hexadecimal.length(); i++) {
-            binario = binario * 10000 + decimalABinario(digitosHexa.indexOf(hexadecimal.charAt(i)));
-        }
-
-        return binario;
-
-    }
+  }  
 }
