@@ -11,44 +11,34 @@ public class ejercicio39 {
 
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        System.out.print("Introduce el valor mínimo del array: ");
-        int minimo = s.nextInt();
 
-        System.out.print("Introduce el valor máximo del array: ");
-        int maximo = s.nextInt();
+        System.out.print("Introduce un número: ");
+        int numero = s.nextInt();
 
-        System.out.print("Introduce el tamaño del array: ");
-        int tamanyo = s.nextInt();
-
-        int[] array = ejerciciodel20al28.matematicas.Varias.generaArrayInt(tamanyo, minimo, maximo);
-        ejerciciodel20al28.matematicas.Varias.mostrarArrayInt(array);
-
-        System.out.println();
-        System.out.println("Su array con números capicuos es: ");
-        ejerciciodel20al28.matematicas.Varias.mostrarArrayInt(filtraCapicuas(array));
+        System.out.println("Su número en palabras es: ");
+        System.out.println(convierteEnPalabras(numero));
     }
 
-//FUNCION//
+//FUNCIONES//
     /**
-     * Devuelve un array con todos los números capicúos que se encuentren en
-     * otro array
+     * Convierte los dígitos del número en una cadena String
      *
      *
-     * @param x array que se pasa como parámetro
-     * @return Devuelve un array sólo formado por los números capicuos
+     * @param n un numero entero
+     * @return Devuelve el número en cadena de caracteres
      */
-    public static int[] filtraCapicuas(int x[]) {
-        int[] capicua = new int[x.length];
-        int contador = 0;
-        for (int i = 0; i < x.length; i++) {
-            if (ejerciciodel1al19.matematicas.Varia.esCapicua(x[i])) {
-                capicua[contador] = x[i];
-                ++contador;
-            }
+    public static String convierteEnPalabras(int n) {
+        String[] palabras = {"cero", "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve"};
+
+        String convertido = "";
+        n = ejerciciodel1al19.matematicas.Varia.voltea(n);
+
+        while (n > 0) {
+            convertido += palabras[n % 10];
+            convertido += ", ";
+            n /= 10;
         }
-        if (contador == 0) {
-            capicua[0] = -1;
-        }
-        return capicua;
+        convertido = convertido.substring(0, convertido.length() - 2);
+        return convertido;
     }
 }
