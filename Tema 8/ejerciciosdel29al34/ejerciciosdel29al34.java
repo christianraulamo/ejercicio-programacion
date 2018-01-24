@@ -12,46 +12,52 @@ public class ejerciciosdel29al34 {
 
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-
-        int[][] a = Varias.generaArrayBiInt(5, 8, 0, 100);
-
-        Varias.muestraArrayBiInt(a);
-        System.out.print("\nFila 2: ");
-        ejerciciodel20al28.matematicas.Varias.muestraArrayInt(Varias.filaDeArrayBiInt(a, 2));
         
-        System.out.print("\nColumna 6: ");
-        ejerciciodel20al28.matematicas.Varias.muestraArrayInt(Varias.columnaDeArrayBiInt(a, 6));
+        System.out.print("Introduce el número de filas: ");
+        int n = s.nextInt();
         
-        System.out.print("\nCoordenadas del 24 (fila, columna): ");
-        ejerciciodel20al28.matematicas.Varias.muestraArrayInt(Varias.coordenadasEnArrayBiInt(a, 24));
-
-        int[][] b = {{11, 10, 9}, {4, 5, 7}, {2, 6, 1}};
-
-        Varias.muestraArrayBiInt(b);
-        System.out.println("\nBusca los puntos de silla: ");
-
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                if (Varias.esPuntoDeSilla(b, i, j)) {
-                    System.out.println("fila " + i + ", columna " + j + " -> " + b[i][j]);
-                }
-            }
-        }
+        System.out.print("Introduce el número de columnas: ");
+        int m = s.nextInt();
         
+        System.out.print("Ahora introduce el valor mínimo: ");
+        int minimo = s.nextInt();
         
+        System.out.print("Ahora introduce el valor máximo: ");
+        int maximo = s.nextInt();
+        
+        int[][] x = Varias.generaArrayBiInt(n, m, minimo, maximo); 
+        Varias.mostrarArrayBiInt(x);
 
-        Varias.muestraArrayBiInt(a);
-        System.out.print("\nFila: ");
+        System.out.print("Introduce la fila que quiere mostrar: ");
         int fila = s.nextInt();
-        
-        System.out.print("Columna: ");
+        int[] array = Varias.filaDeArrayBiInt(x, fila);
+        Varias.mostrarArrayBiInt(array);                               
+        System.out.println();
+
+        System.out.print("Introduce la columna que quiere mostrar: ");
         int columna = s.nextInt();
-        
-        System.out.print("Dirección (nose/neso): ");
+        array = Varias.columnaDeArrayBiInt(x, columna);
+        Varias.mostrarArrayInt(array);                                           
+        System.out.println();
+
+        System.out.print("Introduce el número que quiere buscar en el array: ");
+        int numero = s.nextInt();
+        System.out.println();
+        array = Varias.coordenadasEnArrayBiInt(x, numero);
+
+        System.out.println("Su número está en la posición: ");          
+        Varias.mostrarArrayInt(array);
+        System.out.println();
+        System.out.println("Su número es punto de silla? " + Varias.esPuntoDeSilla(x, numero));  //5
+
+        System.out.print("Introduce la fila desde donde se coge la diagonal: ");
+        fila = s.nextInt();
+        System.out.print("Introduce la columna desde donde se coge la diagonal: ");
+        columna = s.nextInt();
+        System.out.print("Introduce la dirección: 'nose' o 'neso'");
         String direccion = s.next();
-        
-        System.out.print("\nDiagonal: ");
-        ejerciciodel20al28.matematicas.Varias.muestraArrayInt(Varias.diagonal(a, fila, columna, direccion));
+        array = Varias.diagonal(x, fila, columna, direccion);        
+        Varias.mostrarArrayInt(array);
     }
 
 }

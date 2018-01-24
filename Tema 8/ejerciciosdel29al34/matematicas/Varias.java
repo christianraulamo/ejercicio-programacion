@@ -7,213 +7,185 @@ package ejerciciosdel29al34.matematicas;
 public class Varias {
 
     /**
-     * Muestra por pantalla el contenido de un array bidimensional de números
-     * enteros. Los números se muestran perfectamente tabulados en filas y
-     * columnas.
+     * Muestra un array
      *
-     * @param x array bidimiensional de números enteros
+     * @param x un array
      */
-    public static void muestraArrayBiInt(int x[][]) {
-        // El tamaño de la columna será igual al tamaño del número máximo del array
-        String formatoNumero = "%" + ejerciciodel1al19.matematicas.Varia.digitos(maximoArrayBiInt(x)) + "d";
-
-        for (int f = 0; f < x.length; f++) {
-            for (int c = 0; c < x[0].length; c++) {
-                System.out.printf(formatoNumero + " ", x[f][c]);
+    public static void mostrarArrayBiInt(int x[][]) {
+        for (int i = 0; i < x.length; i++) {
+            for (int j = 0; j < x[0].length; ++j) { 
+                System.out.printf("%4d ", x[i][j]);
             }
             System.out.println();
         }
     }
 
     /**
-     * Crea un array bidimensional de números enteros y lo rellena con valores
-     * aleatorios dentro de un rango.
+     * Genera un array de tamaño n con números aleatorios cuyo intervalo (mínimo
+     * y máximo) se indica como parámetro.
      *
-     * Por ejemplo, <code>generaArrayBiInt(8, 7, 10, 30)</code> devolvería un
-     * array de 8 filas por 7 columnas relleno con números generados al azar
-     * comprendidos entre 10 y 30.
-     *
-     * @param filas número de filas que tendrá el array
-     *
-     * @param columnas número de columnas que tendrá el array
-     *
-     * @param minimo límite inferior del intervalo de números aleatorios
-     *
-     * @param máximo límite superior del intervalo de números aleatorios
-     *
-     * @return array bidimensional de números enteros rellena con valores
-     * aleatorios dentro del rango definido por los valores <code>minimo</code>
-     * y <code>maximo</code>
+     * @param m un número entero positivo
+     * @param n un número entero positivo
+     * @param minimo un número entero positivo
+     * @param maximo un número entero positivo
+     * @return Devuelve un array
      */
-    public static int[][] generaArrayBiInt(int filas, int columnas, int minimo, int maximo) {
-        int[][] x = new int[filas][columnas];
+    public static int[][] generaArrayBiInt(int n, int m, int minimo, int maximo) {
+        int[][] array = new int[n][m];
 
-        for (int i = 0; i < filas; i++) {
-            for (int j = 0; j < columnas; j++) {
-                x[i][j] = (int) (Math.random() * (maximo - minimo) + minimo + 1);
+        for (int i = 0; i < n; ++i) {
+            for (int j = 0; j < m; ++j) {
+                array[i][j] = (int) (Math.random() * (maximo - minimo)) + minimo;
             }
         }
 
-        return x;
+        return array;
+
     }
 
     /**
-     * Devuelve el valor máximo de un array bidimensional que se pasa como
-     * parámetro.
+     * Devuelve la fila i-ésima del array que se pasa como parámetro.
      *
-     * @param x array bidimiensional de números enteros
-     * @return número máximo encontrado en el array
-     */
-    public static int maximoArrayBiInt(int x[][]) {
-        int maximo = Integer.MIN_VALUE;
-
-        for (int f = 0; f < x.length; f++) {
-            for (int c = 0; c < x[0].length; c++) {
-                if (x[f][c] > maximo) {
-                    maximo = x[f][c];
-                }
-            }
-        }
-
-        return maximo;
-    }
-
-    /**
-     * Devuelve una fila (array unidimensional) de un array bidimensional que se
-     * pasa como parámetro.
-     *
-     * @param x array bidimiensional de números enteros
-     * @param fila número de la fila que se quiere extraer del array
-     * <code>x</code>
-     * @return fila en forma de array unidimensional extraida del array
-     * <code>x</code>
+     * @param x un array
+     * @param fila es la fila que queremos devolver
+     * @return Devuelve una fila del array
      */
     public static int[] filaDeArrayBiInt(int x[][], int fila) {
-        int[] f = new int[x[0].length];
-
-        for (int c = 0; c < x[0].length; c++) {
-            f[c] = x[fila][c];
+        int[] array = new int[x[0].length];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = x[fila][i];
         }
-
-        return f;
+        return array;
     }
 
     /**
-     * Devuelve una columna (array unidimensional) de un array bidimensional que
-     * se pasa como parámetro.
+     * Devuelve la fila i-ésima del array que se pasa como parámetro.
      *
-     * @param x array bidimiensional de números enteros
-     *
-     * @param columna número de la columna que se quiere extraer del array
-     * <code>x</code>
-     *
-     * @return columna en forma de array unidimensional extraida del array
-     * <code>x</code>
+     * @param x un array
+     * @param columna es la columna que queremos devolver
+     * @return Devuelve una columna del array
      */
     public static int[] columnaDeArrayBiInt(int x[][], int columna) {
-        int[] c = new int[x.length];
-
-        for (int f = 0; f < x.length; f++) {
-            c[f] = x[f][columna];
+        int[] array = new int[x.length];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = x[i][columna];
         }
-
-        return c;
+        return array;
     }
 
     /**
      * Devuelve la fila y la columna (en un array con dos elementos) de la
      * primera ocurrencia de un número dentro de un array bidimensional. Si el
-     * número no se encuentra en el array, la función devuelve -1.
+     * número no se encuentra en el array, la función devuelve el array {-1,
+     * -1}.
      *
-     * @param x array bidimiensional de números enteros
-     *
-     * @param n número que se buscará dentro del array <code>x</code>
-     *
-     * @return array unidimensional de dos elementos que indican la fila y la
-     * columna donde se encuentra <code>n</code> o <code> {-1, -1}</code> en
-     * caso de que <code>n</code> no se encuentre en <code>x</code>
+     * @param x un array
+     * @param numero es el número que buscamos en el array
+     * @return Devuelve la fila y la columna
      */
-    public static int[] coordenadasEnArrayBiInt(int x[][], int n) {
-        for (int f = 0; f < x.length; f++) {
-            for (int c = 0; c < x[0].length; c++) {
-                if (x[f][c] == n) {
-                    int[] coordenadas = {f, c};
-                    return coordenadas;
+    public static int[] coordenadasEnArrayBiInt(int x[][], int numero) {
+        int[] array = new int[2];
+        array[0] = -1;
+        array[1] = -1;
+
+        for (int i = 0; i < x.length; i++) {
+            for (int j = 0; j < x[0].length; j++) {
+                if (numero == x[i][j]) {
+                    array[0] = i;
+                    array[1] = j;
+                    return array;               
                 }
+
             }
         }
-        int[] coordenadas = {-1, -1};
-        return coordenadas;
+        return array;
     }
 
     /**
-     * Dice si un número que se encuentra en una posición determinada de una
-     * matriz (un array bidimensional) que se pasa como parámetro es o no punto
-     * de silla.
-     *
-     * El punto de silla cumple la condición de ser el mínimo en su fila y
+     * Dice si un número es o no punto de silla, es decir, mínimo en su fila y
      * máximo en su columna.
      *
-     * @param x array bidimiensional de números enteros
-     *
-     * @param i fila dentro del array <code>x</code>
-     *
-     * @param j columna dentro del array <code>x</code>
-     *
-     * @return verdadero si el número que se encuentra en la fila <code>i
-     * </code> y la columna <code>j</code> es el mínimo en sufila y el máximo en
-     * su columna.
+     * @param x un array
+     * @param numero Número que queremos saber si es punto de silla
+     * @return Devuelve true si es punto de silla o false si no es punto de
+     * silla
      */
-    public static boolean esPuntoDeSilla(int x[][], int i, int j) {
-
-        int[] fila = filaDeArrayBiInt(x, i);
-        int[] columna = columnaDeArrayBiInt(x, j);
-
-        return ((ejerciciodel20al28.matematicas.Varias.minimoArrayInt(fila) == x[i][j])
-                && (ejerciciodel20al28.matematicas.Varias.maximoArrayInt(columna) == x[i][j]));
+    public static boolean esPuntoDeSilla(int x[][], int numero) {
+        boolean puntoSilla = false;
+        int[] array = coordenadasEnArrayBiInt(x, numero);
+        int[] fila = new int[x[0].length];
+        int[] columna = new int[x.length];
+        for (int i = 0; i < fila.length; i++) {
+            fila[i] = x[array[0]][i];
+        }
+        for (int i = 0; i < columna.length; i++) {
+            columna[i] = x[i][array[1]];
+        }
+        if ((numero == ejerciciodel20al28.matematicas.Varias.minimoArrayInt(fila)) && (numero == ejerciciodel20al28.matematicas.Varias.maximoArrayInt(columna))) {
+            puntoSilla = true;
+        }
+        return puntoSilla;
     }
 
     /**
      * Devuelve un array que contiene una de las diagonales del array
-     * bidimensional que se pasa como parámetro.
+     * bidimensional que se pasa como parámetro. Se pasan como parámetros fila,
+     * columna y dirección. La fila y la columna determinan el número que
+     * marcará las dos posibles diagonales dentro del array. La dirección es una
+     * cadena de caracteres que puede ser “nose” o “neso”. La cadena “nose”
+     * indica que se elige la diagonal que va del noroeste hacia el sureste,
+     * mientras que la cadena “neso” indica que se elige la diagonal que va del
+     * noreste hacia el suroeste.
      *
-     * @param x array bidimiensional de números enteros
-     *
-     * @param fila fila del número que marcará las dos posibles diagonales
-     * dentro del array <code>x</code>
-     *
-     * @param columna columna del número que marcará las dos posibles diagonales
-     * dentro del array <code>x</code>
-     *
-     * @param direccion cadena de caracteres que indica cuál de las dos posibles
-     * diagonales se devolverá; la cadena <code> "nose"</code> indica que se
-     * elige la diagonal que va del noroeste hacia el sureste, mientras que la
-     * cadena <code>"neso"</code> indica que se elige la diagonal que va del
-     * noreste hacia el suroeste
-     *
-     * @return array unidimensional que contiene una diagonal definida por un
-     * número determinado por <code>fila </code> y <code>columna</code> y una
-     * dirección determinada por el parámetro <code>direccion </code>
+     * @param x un array
+     * @param fila
+     * @param columna
+     * @param direccion Direccion de la diagonal
+     * @return Devuelve un array que contiene una de las diagonales
      */
     public static int[] diagonal(int x[][], int fila, int columna, String direccion) {
+        int[] array = new int[x.length];
+        int contador = 0;
 
-        int elementos = 0, i, j;
-        int[] diagonalAux = new int[1000];
-
-        for (i = 0; i < x.length; i++) {
-            for (j = 0; j < x[0].length; j++) {
-                if ((((columna - j) == (fila - i)) && (direccion.equals("nose")))
-                        || (((columna - j) == (i - fila)) && (direccion.equals("neso")))) {
-                    diagonalAux[elementos++] = x[i][j];
-                }
+        if (direccion.equals("nose")) {
+            while ((fila > 0) && (columna > 0)) {
+                --fila;
+                --columna;
+            }
+            while ((fila < x.length) && (columna < x[0].length)) {
+                array[contador] = x[fila][columna];
+                contador++;
+                ++fila;
+                ++columna;
+            }
+        } else {
+            while ((fila > 0) && (columna < x[0].length)) {
+                --fila;
+                ++columna;
+            }
+            while ((fila < x.length) && (columna >= 0)) {
+                array[contador] = x[fila][columna];
+                contador++;
+                ++fila;
+                --columna;
             }
         }
+        return array;
+    }
 
-        int[] diagonal = new int[elementos];
-        for (j = 0; j < elementos; j++) {
-            diagonal[j] = diagonalAux[j];
-        }
+    public static boolean esPuntoDeSilla(int[][] b, int i, int j) {
+        throw new UnsupportedOperationException("Not supported yet."); 
+    }
 
-        return diagonal;
+    public static void mostrarArrayBiInt(int[] array) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    public static void mostrarArrayInt(int[] array) {
+        throw new UnsupportedOperationException("Not supported yet."); 
+    }
+
+    public static void mostrarArrayInt(int[][] array) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

@@ -6,201 +6,196 @@ package ejerciciodel20al28.matematicas;
  */
 public class Varias {
 
-   /**
-   * Muestra por pantalla todos los elementos de un Varias de números enteros
- separados por un espacio.
-   * 
-   * @param x Varias unidimiensional de números enteros
-   */
-  public static void muestraArrayInt(int x[]) {
-    for (int n : x) {
-      System.out.print(n + " ");
+    /**
+     * Muestra un array
+     *
+     * @param x un array
+     */
+    public static void mostrarArrayInt(int x[]) {
+        for (int i = 0; i < x.length; i++) {
+            System.out.print(x[i] + " ");
+        }
     }
-    System.out.println();
-  }
 
-  /**
-   * Crea un Varias y lo rellena con valores aleatorios dentro de un rango.
-   *
-   * Por ejemplo, <code>generaArrayInt(100, 10, 30)</code> devolvería un Varias
- de 100 números generados al azar comprendidos entre 10 y 30.
-   * 
-   * @param n      número de elementos que contendrá el Varias
-   * @param minimo límite inferior del intervalo de números aleatorios
-   * @param maximo límite superior del intervalo de números aleatorios
-   * @return       Varias relleno con valores aleatorios dentro del rango
-               definido por <code>minimo</code> y <code>maximo</code>
-   */
-  public static int[] generaArrayInt(int n, int minimo, int maximo) {
-    int[] x = new int[n];
+    /**
+     * Genera un array de tamaño n con números aleatorios cuyo intervalo (mínimo
+     * y máximo) se indica como parámetro.
+     *
+     * @param x un número entero positivo
+     * @param minimo un número entero positivo
+     * @param maximo un número entero positivo
+     * @return Devuelve un array
+     */
+    public static int[] generaArrayInt(int x, int minimo, int maximo) {
+        int[] array = new int[x];
 
-    for(int i = 0; i < n; i++) {
-      x[i] = (int)(Math.random()*(maximo - minimo + 1) + minimo);
-    }
-      
-    return x;
-  }
+        for (int i = 0; i < array.length; ++i) {
+            array[i] = (int) (Math.random() * (maximo - minimo)) + minimo;
+        }
 
-  /**
-   * Devuelve el mínimo (el número más pequeño) del Varias que se pasa como
- parámetro.
-   * 
-   * @param x Varias unidimiensional de números enteros
-   * @return  el número más pequeño encontrado en el Varias que se pasa como
-          parametro
-   */
-  public static int minimoArrayInt(int[] x) {
-    int minimo = Integer.MAX_VALUE;
-    
-    for (int n : x) {
-      if (n < minimo) {
-        minimo = n;
-      }
-    }
-    return minimo;
-  }
+        return array;
 
-  /**
-   * Devuelve el máximo (el número más grande) del Varias que se pasa como
- parámetro.
-   * 
-   * @param x Varias unidimiensional de números enteros
-   * @return  el número más grande encontrado en el Varias que se pasa como
-          parametro
-   */
-  public static int maximoArrayInt(int[] x) {
-    int maximo = Integer.MIN_VALUE;
-    
-    for (int n : x) {
-      if (n > maximo) {
-        maximo = n;
-      }
     }
-      
-    return maximo;
-  }
-  
-  /**
-   * Devuelve la media aritmética de los números contenidos en el Varias que se
- pasa como parámetro.
-   * 
-   * @param x Varias unidimiensional de números enteros
-   * @return  media aritmética de los números contenidos en el Varias que se pasa
-          como parámetro
-   */
-  public static double mediaArrayInt(int[] x) {
-    int suma = 0;
-    
-    for (int n : x) {
-      suma += n;
-    }
-      
-    return (double)suma / x.length;
-  }
-  
-  /**
-   * Nos dice si un determindado valor está o no dentro de un Varias de números
- enteros.
-   * 
-   * @param x Varias unidimiensional de números enteros
-   * @param n números entero que se buscará dentro del Varias
-   * @return  verdadero si <code>n</code> se encuentra en el Varias
-          <code>x</code> en caso contrario.
-   */
-  public static boolean estaEnArrayInt(int[] x, int n) {
-    for (int numero : x) {
-      if (numero == n) {
-        return true;
-      }
-    }
-    return false;
-  }
-  
-  /**
-   * Devuelve la posición (el índice) de la primera ocurrencia de un número
- dentro de un Varias.
-   *
-   * @param x Varias unidimiensional de números enteros
-   * @param n números entero que se buscará dentro del Varias
-   * @return  posición (índice) de la primera ocurrencia del número
-   *          <code>n</code> dentro del Varias <code>x</code> o -1 en caso de
-   *          no encontrarse el número
-   */
-  public static int posicionEnArrayInt(int[] x, int n) {
-    for(int i = 0; i < x.length; i++) {
-      if (x[i] == n) {
-        return i;
-      }
-    }
-    return -1;
-  }
 
-  /**
-   * Le da la vuelta a un Varias. Los primeros números estarán al final y
-   * viceversa.
-   *
-   * @param x Varias unidimiensional de números enteros
-   * @return  Varias volteada con los primeros números al final y viceversa
-   */
-  public static int[] volteaArrayInt(int[] x) {
-    int[] a = new int[x.length];
-    
-    for(int i = 0; i < x.length; i++) {
-      a[x.length - i - 1] = x[i];
+    /**
+     * Devuelve el máximo del array que se pasa como parámetro.
+     *
+     * @param x un array de números enteros
+     * @return El valor máximo del array
+     */
+    public static int maximoArrayInt(int x[]) {
+        int maximo = 0;
+        for (int i = 0; i < x.length; i++) {
+            if (x[i] > maximo) {
+                maximo = x[i];
+            }
+        }
+        return maximo;
     }
-      
-    return a;
-  }
-  
-  /**
-   * Devuelve un Varias rotada <code>n</code> posiciones a la derecha tomando
- como referencia el Varias que se pasa como parámetro. Los números que van
-   * saliendo por la derecha vuelven a entrar por la izquierda.
-   *
-   * @param x Varias unidimiensional de números enteros
-   * @param n número de movimientos (rotaciones hacia la derecha) a realizar
-   * @return  Varias rotada <code>n</code> posiciones a la derecha
-   */
-  public static int[] rotaDerechaArrayInt(int[] x, int n) {
-    
-    int[] a = x.clone(); // clona en a el contenido de x
-    int i;
-    int aux;
-    
-    while (n-- > 0) {
-      aux = a[a.length - 1];
-      for(i = a.length - 1; i > 0; i--) {
-        a[i] = a[i - 1];
-      }
-      a[0] = aux;
+
+    /**
+     * Devuelve el mínimo del array que se pasa como parámetro.
+     *
+     * @param x un array de números enteros
+     * @return El valor mínimo del array
+     */
+    public static int minimoArrayInt(int x[]) {
+        int minimo = maximoArrayInt(x);
+        for (int i = 0; i < x.length; i++) {
+            if (x[i] < minimo) {
+                minimo = x[i];
+            }
+        }
+        return minimo;
     }
-      
-    return a;
-  }
-  
-  /**
-   * Devuelve un Varias rotada <code>n</code> posiciones a la izquierda tomando
- como referencia el Varias que se pasa como parámetro. Los números que van
-   * saliendo por la izquierda vuelven a entrar por la derecha.
-   *
-   * @param x Varias unidimiensional de números enteros
-   * @param n número de movimientos (rotaciones hacia la izquierda) a realizar
-   * @return  Varias rotada <code>n</code> posiciones a la izquierda
-   */
-  public static int[] rotaIzquierdaArrayInt(int[] x, int n) {
-    
-    int[] a = x.clone(); // clona en a el contenido de x
-    int i;
-    int aux;
-    
-    while (n-- > 0) {
-      aux = a[0];
-      for(i = 0; i < a.length - 1; i++) {
-        a[i] = a[i + 1];
-      }
-      a[a.length - 1] = aux;
+
+    /**
+     * Devuelve la media del array que se pasa como parámetro.
+     *
+     * @param x un array de números enteros
+     * @return La media de los valores del array
+     */
+    public static double mediaArrayInt(int x[]) {
+        double media = 0;
+        for (int i = 0; i < x.length; ++i) {
+            media += x[i];
+        }
+        return media / x.length;
     }
-      
-    return a;
-  }
+
+    /**
+     * Dice si un número está o no dentro del array
+     *
+     * @param x un array de números enteros
+     * @param n un número entero
+     * @return <code>true</code> En el caso de que esté
+     * @return <code>false</code> En el caso de que no esté
+     */
+    public static boolean estaEnArrayInt(int x[], int n) {
+        boolean esta = false;
+        for (int i = 0; i < x.length; ++i) {
+            if (x[i] == n) {
+                esta = true;
+            }
+        }
+        return esta;
+    }
+
+    /**
+     * Busca un número en un array y devuelve la posición (el índice) en la que
+     * se encuentra.
+     *
+     * @param x un array de números enteros
+     * @param n un número entero
+     * @return Devuelve la posición del número en el array
+     */
+    public static int posicionEnArray(int x[], int n) {
+        int posicion = 0;
+        for (int i = 0; i < x.length; ++i) {
+            if (x[i] == n) {
+                posicion = i;
+            }
+        }
+        return posicion;
+    }
+
+    /**
+     * Le da la vuelta a un array
+     *
+     * @param x un array de números enteros
+     */
+    public static void volteaArrayInt(int x[]) {
+        int[] copia = new int[x.length];
+        int contador = 0;
+        for (int i = x.length - 1; i >= 0; --i) {
+            copia[contador] = x[i];
+            ++contador;
+        }
+        for (int i = 0; i < copia.length; i++) {
+            System.out.print(" " + copia[i]);
+        }
+    }
+
+    /**
+     * Rota n posiciones a la derecha los números de un array.
+     *
+     * @param x un array de números enteros
+     * @param n número de posiciones que rota
+     * @return Devuelve el array rotado
+     */
+    public static int[] rotaDerechaArrayInt(int x[], int n) {
+        int[] copia = new int[x.length + 1];
+        int[] auxiliar = new int[x.length + 1];
+
+        for (int i = 0; i < copia.length - 1; ++i) {
+            copia[i] = x[i];
+        }
+
+        for (int i = 0; i < n; i++) {
+
+            for (int j = 0; j < copia.length - 1; j++) {
+                auxiliar[j + 1] = copia[j];                   
+                if (j + 1 == copia.length - 1) {
+                    auxiliar[0] = copia[copia.length - 2];
+                }
+            }
+
+            for (int j = 0; j < copia.length; j++) {
+                copia[j] = auxiliar[j];                       
+            }
+        }
+
+        return auxiliar;
+    }
+
+    /**
+     * Rota n posiciones a la izquierda los números de un array.
+     *
+     * @param x un array de números enteros
+     * @param n número de posiciones que rota
+     * @return Devuelve array rotado
+     */
+    public static int[] rotaIzquierdaArrayInt(int x[], int n) {
+        int[] copia = new int[x.length + 1];
+        int[] auxiliar = new int[x.length + 1];
+
+        for (int i = 0; i < copia.length - 1; ++i) {
+            copia[i] = x[i];
+        }
+
+        for (int i = 0; i < n; i++) {
+            for (int j = copia.length - 2; j >= 0; j--) {
+                if (j - 1 == -1) {
+                    auxiliar[auxiliar.length - 2] = copia[0];     
+                } else {
+                    auxiliar[j - 1] = copia[j];
+                }
+            }
+
+            for (int j = 0; j < copia.length; j++) {
+                copia[j] = auxiliar[j];                       
+            }
+        }
+        return auxiliar;
+    }
 }
