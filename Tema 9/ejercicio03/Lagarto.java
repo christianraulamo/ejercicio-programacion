@@ -20,7 +20,7 @@ public class Lagarto extends Animal {
     System.out.println("Me estoy bañando");
   }
 
-  public void escondete() {
+  public void esconderse() {
     System.out.println("Me he camufrado, ya no me puedes ver");
   }
 }

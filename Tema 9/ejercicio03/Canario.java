@@ -17,7 +17,7 @@ public class Canario extends Ave {
   }
 
   public void caza() {
-    System.out.println("Los canarios no cazan");
+    System.out.println("Los canarios no cazan, son cazados");
   }
 
   public void pia() {
