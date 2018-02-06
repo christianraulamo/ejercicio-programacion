@@ -8,6 +8,7 @@ public class PruebaAnimales {
 
     public static void main(String[] args) {
         Pinguino paco = new Pinguino(Sexo.MACHO);
+        System.out.println("Soy " + paco.getSexo());
         paco.come("peces");
         paco.programa();
         paco.vuela();
@@ -17,6 +18,7 @@ public class PruebaAnimales {
         paco.limpiate();
         
         Perro samana = new Perro(Sexo.HEMBRA);
+        System.out.println("Soy " + samana.getSexo());
         samana.dameLaPata();
         samana.ladra();
         samana.caza();
@@ -26,12 +28,14 @@ public class PruebaAnimales {
         samana.duerme();
 
         Lagarto pedro = new Lagarto(Sexo.MACHO);
+        System.out.println("Soy " + pedro.getSexo());
         pedro.tomaElSol();
         pedro.baniate();
         pedro.esconderse();
         pedro.duerme();
         
         Canario piolin = new Canario (Sexo.HEMBRA);
+        System.out.println("Soy " + piolin.getSexo());
         piolin.canta();
         piolin.caza();
         piolin.come("pipas");
@@ -43,6 +47,7 @@ public class PruebaAnimales {
         
         Gato garfiel = new Gato (Sexo.MACHO);
         Gato mini = new Gato (Sexo.HEMBRA);
+        System.out.println("Soy " + garfiel.getSexo());
         garfiel.ronronea();
         garfiel.maulla();
         garfiel.caza();
