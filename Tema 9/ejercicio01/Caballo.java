@@ -21,6 +21,18 @@ public class Caballo {
     public String getNombre() {
         return this.nombre;
     }
+    
+    public String getColor() {
+        return this.color;
+    }
+    
+    public int getEdad() {
+        return this.edad;
+    }
+    
+    public int getConcursosGanados() {
+        return this.concursosGanadas;
+    }
 
     public void cabalga() {
         System.out.println("Tocotoc tocotoc tocotoc");
