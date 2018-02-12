@@ -15,8 +15,8 @@ public class PruebaVehiculo {
         int opcion = 0;
         int km;
 
-        Bicicleta Paco = new Bicicleta(9);
-        Coche Juan = new Coche(1900);
+        Bicicleta paco = new Bicicleta(9);
+        Coche juan = new Coche(1900);
 
         while (opcion != 8) {
             System.out.println("1. Anda con la bicicleta");
@@ -35,26 +35,26 @@ public class PruebaVehiculo {
                 case 1:
                     System.out.print("¿Cuántos kilómetros quiere recorrer? ");
                     km = Integer.parseInt(System.console().readLine());
-                    Paco.recorre(km);
+                    paco.recorre(km);
                     break;
                 case 2:
-                    Paco.hazCaballito();
+                    paco.hazCaballito();
                     break;
                 case 3:
                     System.out.print("¿Cuántos kilómetros quiere recorrer? ");
                     km = Integer.parseInt(System.console().readLine());
-                    Juan.recorre(km);
+                    juan.recorre(km);
                     break;
                 case 4:
-                    Juan.quemaRueda();
+                    juan.quemaRueda();
                     break;
                 case 5:
                     System.out.println("La bicicleta lleva recorridos ");
-                    System.out.println(Paco.getKilometrosRecorridos() + " Km");
+                    System.out.println(paco.getKilometrosRecorridos() + " Km");
                     break;
                 case 6:
                     System.out.println("El coche lleva recorridos ");
-                    System.out.println(Juan.getKilometrosRecorridos() + " Km");
+                    System.out.println(juan.getKilometrosRecorridos() + " Km");
                     break;
                 case 7:
                     System.out.println("Los vehículos llevan recorridos ");

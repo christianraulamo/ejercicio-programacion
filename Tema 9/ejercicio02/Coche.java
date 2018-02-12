@@ -5,7 +5,7 @@ package ejercicio02;
  *
  * @author christian
  */
-public class Coche {
+public class Coche extends Vehiculo{
 
     private int cilindrada;
 

@@ -5,7 +5,7 @@ package ejercicio02;
  *
  * @author christian
  */
-public class Bicicleta {
+public class Bicicleta extends Vehiculo{
 
     private int pinones;
 
