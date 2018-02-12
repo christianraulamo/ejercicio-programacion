@@ -5,9 +5,12 @@ package ejercicio07;
  *
  * @author christian
  */
+import java.util.Scanner;
+
 public class ExpoCochesCampanilla {
 
     public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
 
         Zona principal = new Zona(1000);
         Zona compraVenta = new Zona(200);
@@ -22,9 +25,9 @@ public class ExpoCochesCampanilla {
             System.out.println("1. Mostrar número de entradas libres");
             System.out.println("2. Vender entradas");
             System.out.println("3. Salir");
-            System.out.println("Elige una opción: ");
+            System.out.print("Elige una opción: ");
 
-            opcion = Integer.parseInt(System.console().readLine());
+            opcion = s.nextInt();
 
             if (opcion == 1) {
                 System.out.println("\n\nEn la zona principal hay " + principal.getEntradasPorVender());
@@ -38,10 +41,10 @@ public class ExpoCochesCampanilla {
                 System.out.println("3. Vip");
                 System.out.print("Elige la zona para la que quieres comprar las entradas: ");
 
-                opcion2 = Integer.parseInt(System.console().readLine());
+                opcion2 = s.nextInt();
 
                 System.out.print("¿Cuántas entradas quieres? ");
-                n = Integer.parseInt(System.console().readLine());
+                n = s.nextInt();
 
                 switch (opcion2) {
                     case 1:

@@ -27,14 +27,14 @@ public class PruebaVehiculo {
             System.out.println("6. Ver kilometraje del coche");
             System.out.println("7. Ver kilometraje total");
             System.out.println("8. Salir");
-            System.out.println("Elige una opción (1-8): ");
+            System.out.print("Elige una opción (1-8): ");
 
-            opcion = Integer.parseInt(System.console().readLine());
+            opcion = s.nextInt();
 
             switch (opcion) {
                 case 1:
                     System.out.print("¿Cuántos kilómetros quiere recorrer? ");
-                    km = Integer.parseInt(System.console().readLine());
+                    km = s.nextInt();
                     paco.recorre(km);
                     break;
                 case 2:
@@ -42,7 +42,7 @@ public class PruebaVehiculo {
                     break;
                 case 3:
                     System.out.print("¿Cuántos kilómetros quiere recorrer? ");
-                    km = Integer.parseInt(System.console().readLine());
+                    km = s.nextInt();
                     juan.recorre(km);
                     break;
                 case 4:
