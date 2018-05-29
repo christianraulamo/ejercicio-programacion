@@ -1,4 +1,4 @@
-﻿# Ejercicios de Programación de 1º DAM
+# Ejercicios de Programación de 1º DAM
 Ejercicios de la asignatura Programación **1º DAM (Desarrollo de Aplicaciones Multiplataforma)** del IES Campanilla.
 
 ## :computer: ¿Qué se aprende en Programación?
